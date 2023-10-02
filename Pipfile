@@ -12,6 +12,7 @@ wikipedia = "*"
 youtube-transcript-api = "*"
 faiss-cpu = "*"
 tiktoken = "*"
+pypdf = "*"
 
 [dev-packages]
 
