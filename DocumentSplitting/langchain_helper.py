@@ -9,13 +9,27 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-def splitters(chunk_size=26, chunk_overlap=4):
-    r_splitter = RecursiveCharacterTextSplitter(
+def ex_r_splitter(chunk_size=26, chunk_overlap=4):
+    return RecursiveCharacterTextSplitter(
         chunk_size=chunk_size, chunk_overlap=chunk_overlap
     )
-    c_splitter = CharacterTextSplitter(
-        chunk_size=chunk_size, chunk_overlap=chunk_overlap
-    )
-    token_splitter = TokenTextSplitter(chunk_size=1, chunk_overlap=0)
 
-    return r_splitter, c_splitter, token_splitter
+
+def ex_c_splitter(chunk_size=26, chunk_overlap=4, separator=""):
+    return CharacterTextSplitter(
+        chunk_size=chunk_size, chunk_overlap=chunk_overlap, separator=separator
+    )
+
+
+def ex_t_splitter(chunk_size=1, chunk_overlap=0):
+    return TokenTextSplitter(chunk_size=chunk_size, chunk_overlap=chunk_overlap)
+
+
+def ex_m_splitter():
+    return MarkdownHeaderTextSplitter(
+        headers_to_split_on=[
+            ("#", "Header 1"),
+            ("##", "Header 2"),
+            ("###", "Header 3"),
+        ]
+    )
