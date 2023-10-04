@@ -13,6 +13,9 @@ youtube-transcript-api = "*"
 faiss-cpu = "*"
 tiktoken = "*"
 pypdf = "*"
+numpy = "*"
+chromadb = "*"
+lark = "*"
 
 [dev-packages]
 
