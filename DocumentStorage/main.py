@@ -3,7 +3,7 @@ import re
 import langchain_helper as lch
 import streamlit as st
 
-st.title("Splitting")
+st.title("Storage")
 
 with st.sidebar:
     with st.form(key="side_form"):
